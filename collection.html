@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luciferia — The Collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel+Decorative:wght@700&family=Cairo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=UnifrakturCook&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
@@ -15,31 +15,60 @@
   </div>
 
   <header class="main-header">
-    <div class="nav-left">
-      <a href="index.html">HOME</a>
-      <a href="collection.html">CATALOG</a>
-      <a href="#">CONTACT</a>
+    <div class="logo-container">
+      <div class="blood-moon"></div>
+      <h1 class="logo-title">Luciferia.eg</h1>
     </div>
-    <div class="logo-center">
-      Luciferia.eg<span class="dot"></span><br/>
-      <div class="logo-subtitle">Where darkness meets elegance</div>
-    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="collection.html">CATALOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
   </header>
 
-  <section class="collection-hero">
-    <div class="title">The Collection</div>
-    <div class="desc">
-      Step deeper into the world of Luciferia.<br/>
-      Each garment is a fusion of mystery and sophistication.<br/><br/>
-      <span class="highlight">Browse our signature pieces below.</span>
+  <section class="collection-section">
+    <h2 class="collection-title">The Collection</h2>
+    <p class="collection-desc">
+      Step deeper into the world of Luciferia.  
+      Each garment is a fusion of mystery and sophistication, designed for those who walk their own path.
+    </p>
+
+    <div class="search-container">
+      <input type="text" placeholder="Search by name or keyword..." id="search-bar">
     </div>
 
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search by name or keyword...">
-    </div>
+    <div class="product-grid">
+      <!-- Repeat this block for each product -->
+      <!-- Sample Product Card -->
+      <div class="product-card" data-name="crimson veil shirt">
+        <div class="img-container">
+          <img src="https://i.ibb.co/3gNN18P/shirt1.jpg" alt="Crimson Veil Shirt">
+          <div class="overlay">
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <h4>Crimson Veil Shirt</h4>
+        <p class="price"><span class="old-price">3200 EGP</span> 2800 EGP</p>
+      </div>
 
-    <div class="products" id="productContainer">
-      <!-- Products will be rendered by JS -->
+      <!-- Repeat your other 5 product cards here from previous example -->
+
+      <!-- Example for one more -->
+      <div class="product-card" data-name="shadow thorn blouse">
+        <div class="img-container">
+          <img src="https://i.ibb.co/ynw42xJ/shirt2.jpg" alt="Shadow Thorn Blouse">
+          <div class="overlay">
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <h4>Shadow Thorn Blouse</h4>
+        <p class="price"><span class="old-price">3500 EGP</span> 2999 EGP</p>
+      </div>
+
+      <!-- (Repeat the rest here) -->
     </div>
 
   </section>
