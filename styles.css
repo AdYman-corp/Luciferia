@@ -20,7 +20,7 @@ body {
   justify-content: center;  /* Center content horizontally */
   align-items: center;
   background: #330000;
-  padding: 20px;
+  padding: 15px;
   border-bottom: 1px solid #ff0000;
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
   position: relative; /* Important for nav positioning */
@@ -35,7 +35,7 @@ body {
 
 
 .logo-title {
-  margin: 10px 0;
+  margin: 0;
   font-size: 32px;
   font-family: 'UnifrakturCook', cursive;
   color: #f5f5f5;
@@ -64,7 +64,7 @@ body {
 .nav-links {
   position: absolute;
   right: 20px;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
   display: flex;
   gap: 25px;
