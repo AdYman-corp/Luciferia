@@ -20,7 +20,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #330000;
-  padding: 20px;
+  padding: 50%;
   border-bottom: 1px solid #ff0000;
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
 }
