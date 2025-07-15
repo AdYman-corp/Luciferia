@@ -59,6 +59,7 @@ body {
 /* Centered Logo with Blood Moon */
 .logo-center {
   text-align: center;
+  left: 43.5%;
   font-family: 'UnifrakturCook', cursive;
   font-size: 2rem;
   color: #2d0606;
