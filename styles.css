@@ -64,7 +64,7 @@ body {
 .nav-links {
   position: absolute;
   left: 6px;
-  top: 10%;
+  top: 25%;
   transform: translateY(-50%);
   display: flex;
   gap: 25px;
