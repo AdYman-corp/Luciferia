@@ -24,6 +24,24 @@ if (searchInput) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+
+  const productName = params.get('name');
+  const productImage = params.get('image');
+  const productOldPrice = params.get('oldPrice');
+  const productNewPrice = params.get('newPrice');
+
+  if (productName) document.getElementById('productName').textContent = productName;
+  if (productImage) document.getElementById('productImage').src = productImage;
+  if (productNewPrice) {
+    document.getElementById('productPrice').innerHTML = `
+      <span class="old-price">${productOldPrice}</span> ${productNewPrice}
+    `;
+  }
+});
+
+
 // Redirect to Product Details on Click
 const productCards = document.querySelectorAll('.flip-product-card');
 
@@ -34,7 +52,7 @@ productCards.forEach(card => {
     const oldPrice = card.querySelector('.product-flip-front .old-price').textContent.trim();
     const newPrice = card.querySelector('.product-flip-front .price').childNodes[1].nodeValue.trim();
 
-    const url = `product.html?name=${encodeURIComponent(title)}&amp;image=${encodeURIComponent(image)}&amp;oldPrice=${encodeURIComponent(oldPrice)}&amp;newPrice=${encodeURIComponent(newPrice)}`;
+    const url = `product.html?name=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&oldPrice=${encodeURIComponent(oldPrice)}&newPrice=${encodeURIComponent(newPrice)}`;
     window.location.href = url;
   });
 });
