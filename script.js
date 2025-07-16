@@ -35,7 +35,7 @@ productCards.forEach(card => {
     const newPrice = card.querySelector('.product-flip-front .price').childNodes[1].nodeValue.trim();
 
     const url = `product.html?name=${encodeURIComponent(title)}&amp;image=${encodeURIComponent(image)}&amp;oldPrice=${encodeURIComponent(oldPrice)}&amp;newPrice=${encodeURIComponent(newPrice)}`;
-;
+    window.location.href = url;
   });
 });
 // Grab URL Params
