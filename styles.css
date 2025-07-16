@@ -17,7 +17,7 @@ body {
 
 .main-header {
   display: flex;
-  justify-content: center;  /* Center content horizontally */
+  justify-content: center;  /* Center content horizontallyy */
   align-items: center;
   background: #330000;
   padding: 15px;
