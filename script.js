@@ -35,7 +35,7 @@ productCards.forEach(card => {
     const newPrice = card.querySelector('.product-flip-front .price').childNodes[1].nodeValue.trim();
 
     const url = `product.html?name=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&oldPrice=${encodeURIComponent(oldPrice)}&newPrice=${encodeURIComponent(newPrice)}`;
-    window.location.href = url;
+
   });
 });
 // Grab URL Params
@@ -65,4 +65,32 @@ document.getElementById('addToCartBtn').addEventListener('click', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+
+  const productName = params.get('name');
+  const productImage = params.get('image');
+  const productOldPrice = params.get('oldPrice');
+  const productNewPrice = params.get('newPrice');
+
+  if (productName) document.getElementById('productName').textContent = productName;
+  if (productImage) document.getElementById('productImage').src = productImage;
+  if (productNewPrice) {
+    document.getElementById('productPrice').innerHTML = `
+      <span class="old-price">${productOldPrice}</span> ${productNewPrice}
+    `;
+  }
+
+  const addToCartBtn = document.getElementById('addToCartBtn');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', () => {
+      const size = document.getElementById('size').value;
+      if (!size) {
+        alert('Please select a size before adding to cart.');
+      } else {
+        alert(`"${productName}" of size "${size}" added to cart (not implemented).`);
+      }
+    });
+  }
+});
 
