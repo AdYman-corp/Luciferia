@@ -24,20 +24,22 @@ if (searchInput) {
   });
 }
 
-// Redirect to Product Details on Click
-const productCards = document.querySelectorAll('.flip-product-card');
-
+// Redirect to Product Details on Card Click
 productCards.forEach(card => {
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (e) => {
+    // Prevent redirect if the click was on the button
+    if (e.target.closest('.btn')) return;
+
     const title = card.querySelector('.product-flip-front h4').textContent.trim();
     const image = card.querySelector('.product-flip-front img').src;
     const oldPrice = card.querySelector('.product-flip-front .old-price').textContent.trim();
     const newPrice = card.querySelector('.product-flip-front .price').childNodes[1].nodeValue.trim();
 
     const url = `product.html?name=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&oldPrice=${encodeURIComponent(oldPrice)}&newPrice=${encodeURIComponent(newPrice)}`;
-
+    window.location.href = url;
   });
 });
+
 // Grab URL Params
 const params = new URLSearchParams(window.location.search);
 
