@@ -1,64 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luciferia — The Collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=UnifrakturCook&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
-</head>
-<body>
+<section class="collection-section">
+  <h2 class="collection-title">The Collection</h2>
+  <p class="collection-desc">Explore the gothic elegance crafted into every piece.</p>
 
-  <div class="top-bar">
-    FREE SHIPPING On All Orders Over 2000L.E
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search by name or keyword...">
   </div>
 
-  <header class="main-header">
-    <div class="logo-container">
-      <h1 class="logo-title">Luciferia.eg</h1>
-      <div class="blood-moon"></div>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="collection.html">CATALOG</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">☰</div>
-    </nav>
-  </header>
-
-  <section class="collection-section">
-    <h2 class="collection-title">The Collection</h2>
-    <p class="collection-desc">
-      Step deeper into the world of Luciferia.  
-      Each garment is a fusion of mystery and sophistication, designed for those who walk their own path.
-    </p>
-
-    <div class="search-container">
-      <input type="text" placeholder="Search by name or keyword..." id="search-bar">
-    </div>
-
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-flip-card">
-          <div class="product-flip-content">
-            <div class="product-flip-front">
-              <img src="https://i.ibb.co/3gNN18P/shirt1.jpg" alt="Crimson Veil Shirt">
-              <h4>Crimson Veil Shirt</h4>
-              <p class="price"><span class="old-price">3200 EGP</span> 2800 EGP</p> 
-            </div>
-            <div class="product-flip-back">
-              <div class="product-back-content">
-                <p>Premium gothic design with crimson highlights.</p> 
-                <button class="btn">Add to Cart</button>
-              </div>
+  <div class="product-grid" id="productContainer">
+    <div class="product-card" data-name="crimson veil shirt">
+      <div class="product-flip-card">
+        <div class="product-flip-content">
+          <div class="product-flip-front">
+            <img src="https://i.ibb.co/3gNN18P/shirt1.jpg" alt="Crimson Veil Shirt">
+            <h4>Crimson Veil Shirt</h4>
+            <p class="price"><span class="old-price">3200 EGP</span> 2800 EGP</p>
+          </div>
+          <div class="product-flip-back">
+            <div class="product-back-content">
+              <p>Gothic-inspired crimson veil with premium materials.</p>
+              <button class="btn">Add to Cart</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-  </section>
-</body>
-</html>
+    <!-- Repeat for the rest of your products -->
+
+    <div class="product-card" data-name="shadow thorn blouse">
+      <div class="product-flip-card">
+        <div class="product-flip-content">
+          <div class="product-flip-front">
+            <img src="https://i.ibb.co/ynw42xJx/shirt2.jpg" alt="Shadow Thorn Blouse">
+            <h4>Shadow Thorn Blouse</h4>
+            <p class="price"><span class="old-price">3500 EGP</span> 2999 EGP</p>
+          </div>
+          <div class="product-flip-back">
+            <div class="product-back-content">
+              <p>Embrace the shadow with delicate thorn patterns.</p>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- (Add your other 4 products here following the same structure) -->
+
+  </div>
+</section>
