@@ -31,16 +31,38 @@ productCards.forEach(card => {
   card.addEventListener('click', () => {
     const title = card.querySelector('.product-flip-front h4').textContent.trim();
     const image = card.querySelector('.product-flip-front img').src;
-    const priceText = card.querySelector('.product-flip-front .price').textContent.trim();
-    
-    // Extract price number from the text (you can adjust this if format changes)
-    const priceMatch = priceText.match(/(\d+)\s*EGP/);
-    const price = priceMatch ? priceMatch[1] : '';
+    const oldPrice = card.querySelector('.product-flip-front .old-price').textContent.trim();
+    const newPrice = card.querySelector('.product-flip-front .price').childNodes[1].nodeValue.trim();
 
-    // Build URL with params
-    const url = `product.html?name=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}`;
+    const url = `product.html?name=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&oldPrice=${encodeURIComponent(oldPrice)}&newPrice=${encodeURIComponent(newPrice)}`;
     window.location.href = url;
   });
 });
+// Grab URL Params
+const params = new URLSearchParams(window.location.search);
+
+const productName = params.get('name');
+const productImage = params.get('image');
+const productOldPrice = params.get('oldPrice');
+const productNewPrice = params.get('newPrice');
+
+if (productName) document.getElementById('productName').textContent = productName;
+if (productImage) document.getElementById('productImage').src = productImage;
+if (productNewPrice) {
+  document.getElementById('productPrice').innerHTML = `
+    <span class="old-price">${productOldPrice}</span> ${productNewPrice}
+  `;
+}
+
+// Add to Cart Button (Placeholder)
+document.getElementById('addToCartBtn').addEventListener('click', () => {
+  const size = document.getElementById('size').value;
+  if (!size) {
+    alert('Please select a size before adding to cart.');
+  } else {
+    alert(`"${productName}" of size "${size}" added to cart (not implemented).`);
+  }
+});
+
 
 
