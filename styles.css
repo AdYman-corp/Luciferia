@@ -265,7 +265,7 @@ body {
     flex-direction: column;
     background: #330000;
     position: absolute;
-    top: 70px;
+    top: 25%;
     left: 20px;
     padding: 10px;
     border: 1px solid #ff0000;
