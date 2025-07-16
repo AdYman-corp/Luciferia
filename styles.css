@@ -354,3 +354,60 @@ body {
     display: block;
   }
 }
+
+
+/* Product */
+/* Product Details Section */
+.product-details {
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.product-title {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 24px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.size-selector select {
+  background: #1a0000;
+  color: #fff;
+  border: 1px solid #ff0000;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #b30000;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ff0000;
+  transform: scale(1.05);
+}
