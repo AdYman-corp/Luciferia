@@ -6,15 +6,23 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Search Filter (for collection page)
-const searchBar = document.getElementById('search-bar');
-if (searchBar) {
-  const productCards = document.querySelectorAll('.product-card');
-  searchBar.addEventListener('input', (e) => {
-    const searchValue = e.target.value.toLowerCase();
+// Search Filter for Flip Cards Collection
+const searchInput = document.getElementById('searchInput');
+
+if (searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+
+    // Select all flip product cards inside the grid
+    const productCards = document.querySelectorAll('.flip-product-card');
+
     productCards.forEach(card => {
-      const name = card.getAttribute('data-name');
-      card.style.display = name.includes(searchValue) ? 'block' : 'none';
+      const titleElement = card.querySelector('.product-flip-front h4');
+      if (titleElement) {
+        const name = titleElement.textContent.toLowerCase();
+        card.style.display = name.includes(query) ? 'block' : 'none';
+      }
     });
   });
 }
+
